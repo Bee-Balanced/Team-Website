@@ -69,10 +69,11 @@ div {
   margin: 0;
   overflow: hidden;
   background-color: #333;
+  text-align:center;
 }
 
 .tab-bar li {
-  float: left;
+  display:inline-block;
 }
 
 .tab-bar li a {
@@ -86,3 +87,60 @@ div {
 .tab-bar li a:hover {
   background-color: #111;
 }
+
+/* Team Members*/
+.team-section{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.member-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+.member-container:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+.member-container img {
+  width: 150px;  
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 50%;
+}
+
+.info-container {
+  margin-top: 10px;
+}
+
+.info-container h2 {
+  font-size: 22px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.info-container h3 {
+  font-size: 20px;
+  color: #ff9900;
+  margin: 15px 0 10px;
+}
+.info-container p {
+  font-size: 16px;
+  color: #333;
+}
+.info-container p0 {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+
+
+
+
