@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey - Bee Balanced</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="img/videoBackground.mp4" type="video/mp4">
+    </video>
+    <nav>
+      <ul class="tab-bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="details.html">Project Details</a></li>
+        <li><a href="team.html">Meet the Team</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="survey.html">Survey</a></li>
+      </ul>
+    </nav>
+    <header class="main-header">
+      <div class="header-content">
+        <h1>Survey</h1>
+      </div>
+    </header>
+    <section class="intro">
+      <h2>Daily Survey</h2>
+      <div class="survey-box">
+        <p>How satisfied are you with your current progress today?</p>
+        <button class="survey-btn" onclick="nextQuestion(1)">1</button>
+        <button class="survey-btn" onclick="nextQuestion(2)">2</button>
+        <button class="survey-btn" onclick="nextQuestion(3)">3</button>
+        <button class="survey-btn" onclick="nextQuestion(4)">4</button>
+        <button class="survey-btn" onclick="nextQuestion(5)">5</button>
+      </div>
+      <div class="survey-box" id="completion-message" style="display:none;">
+        <h4>You have completed all the survey questions today!</h4>
+      </div>
+    </section>
+    <script>
+      let questionIndex = 0;
+      const questions = [
+        "How satisfied are you with your current progress today?",
+        "How productive did you feel today?",
+        "How motivated are you to achieve your goals?",
+        "How clear is your understanding of your tasks?",
+        "How balanced do you feel in your work-life activities?"
+      ];
+
+      function nextQuestion(response) {
+        questionIndex++;
+        if (questionIndex < questions.length) {
+          document.querySelector('.survey-box p').textContent = questions[questionIndex];
+        } else {
+          document.querySelector('.survey-box').style.display = 'none';
+          document.getElementById('completion-message').style.display = 'block';
+        }
+      }
+    </script>
+  </body>
+</html>
